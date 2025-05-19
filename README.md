@@ -29,7 +29,7 @@ This is a Flask-based AI copilot application designed to assist mental health co
 
 **Setup Instructions**
 
-Clone the repo: git clone https://github.com/tobyabe11/testapp.git
+Clone the repo: git clone https://github.com/tobyabe11/Counselor-copilot.git
 cd mental-health-assistant
 
 Create and activate virtual environment:
