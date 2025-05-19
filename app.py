@@ -17,7 +17,7 @@ print("HERE IS YOUR OPENAI",os.getenv("OPENAI_API_KEY"))
 app = Flask(__name__)
 
 # Load dataset
-df = pd.read_csv(r"C:\Users\thobi\mental_health_assistant\train.csv").fillna("")
+df = pd.read_csv(r"C:\Users\thobi\mental_health_assistant\testapp\train.csv").fillna("")
 df["Combined"] = df["Context"] + " " + df["Response"]
 
 # Sentiment analysis for insights
@@ -31,7 +31,7 @@ X = vectorizer.fit_transform(df['Combined'])
 
 # Logging files
 LOG_FILE = "conversation_log.txt"
-EXCEL_LOG_FILE = "conversation_log.xlsx"
+
 
 # Log interaction to both txt and Excel
 def log_interaction(step, user_message, context, response, ai_summary, counselor_response=None):
@@ -46,23 +46,6 @@ def log_interaction(step, user_message, context, response, ai_summary, counselor
         if counselor_response:
             f.write(f"Counselor Response: {counselor_response}\n")
         f.write("\n")
-
-    data = {
-        'Timestamp': [timestamp],
-        'Step': [step],
-        'User Message': [user_message],
-        'Matched Context': [context],
-        'Reference Response': [response],
-        'AI Copilot Summary': [ai_summary],
-        'Counselor Response': [counselor_response]
-    }
-    new_entry = pd.DataFrame(data)
-    if os.path.exists(EXCEL_LOG_FILE):
-        old_df = pd.read_excel(EXCEL_LOG_FILE)
-        updated_df = pd.concat([old_df, new_entry], ignore_index=True)
-    else:
-        updated_df = new_entry
-    updated_df.to_excel(EXCEL_LOG_FILE, index=False)
 
 # Generate AI Summary from matched context
 
