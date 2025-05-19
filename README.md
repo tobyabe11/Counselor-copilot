@@ -41,14 +41,13 @@ source .venv/bin/activate
 **Install dependencies:**
 
 pip install -r requirements.txt
+
 Create a .env file:
 Add your OpenAI key: OPENAI_API_KEY=your_openai_key
 
 Run the app:
 python app.py
 
-Deployment (Optional)
-To deploy on AWS EC2 with NGINX and Gunicorn, follow the deployment guide here.
 
 **📁 Logs**
 
