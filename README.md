@@ -57,11 +57,13 @@ This includes user messages, AI summaries, counselor responses, and triage sugge
 
 **📌 Future Improvements**
 Functional:
-- Deeply personalized context with long term memory for individual patients
+- Semantic content matching using embedding based model instead of words
 - Automated response generation using customized llm
 - Inclusion of guardrails to protect counselors from liabilities
-- Realtime respone reviewer system 
-
+- Realtime respone reviewer system
+  
 Non-Functional:
 - Session management
 - Data persistence
+
+Dataset used from this source: https://www.kaggle.com/datasets/thedevastator/nlp-mental-health-conversations?resource=download
