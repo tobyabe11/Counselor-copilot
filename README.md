@@ -1,12 +1,13 @@
 **Mental Health Assistant – Counselor Copilot**
 
 This is a Flask-based AI copilot application designed to assist mental health counselors by:
-** Receiving and logging patient messages
-** Matching them semantically with past context and responses
-** Summarizing how similar cases were handled
-** Suggesting AI-generated triage questions when no match is found
-** Allowing counselors to respond manually or with AI assistance
-** Logging all interactions to a text file for audit and analysis
+
+- Receiving and logging patient messages
+- Matching them semantically with past context and responses
+- Summarizing how similar cases were handled
+- Suggesting AI-generated triage questions when no match is found
+- Allowing counselors to respond manually or with AI assistance
+- Logging all interactions to a text file for audit and analysis
 
 **Features**
 
